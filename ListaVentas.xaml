@@ -1,0 +1,52 @@
+﻿<Window x:Class="Ventas.ListaVentas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ventas"
+        mc:Ignorable="d"
+        Title="ListaVentas" Height="449.057" Width="646.226">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DockPanel Margin="0,0,0,393">
+            <Label Content="Gestion de Ventas" Background="#FFE7AF" Width="611"/>
+            <Menu DockPanel.Dock="Top" Background="#FFE7AF">
+                <MenuItem Header="_File" Width="28" HorizontalAlignment="Right" RenderTransformOrigin="18.484,0.5">
+                    <MenuItem Header="_New" />
+                    <MenuItem Header="_Open" />
+                    <MenuItem Header="_Save" />
+                    <Separator />
+                    <MenuItem Header="_Exit" />
+                </MenuItem>
+            </Menu>
+
+        </DockPanel>
+        <Label Content="Introduce el código del dependiente:" Margin="0,30,204,363" Background="#F2E2BE"/>
+        <TextBox Name="CDep" Margin="234,33,212,366" />
+        <Button Content="Buscar" Margin="468,30,54,360"  Background="#F2E2BE"/>
+
+
+
+
+        <ListView Name="UserGrid" Margin="53,134,54,36"  ItemsSource="{Binding Users}">
+            <ListView.View>
+                <GridView x:Name="grdTest">
+                    <GridViewColumn Header="Codigo Articulo" DisplayMemberBinding="{Binding UserId}"  Width="100"/>
+                    <GridViewColumn Header="Importe" DisplayMemberBinding="{Binding FirstName}"  Width="60" />
+                    <GridViewColumn Header="Fecha" DisplayMemberBinding="{Binding LastName}" Width="60" />
+                    <GridViewColumn Header="Comisión" DisplayMemberBinding="{Binding City}" Width="60" />
+                    <GridViewColumn Header="Código Dependiente" DisplayMemberBinding="{Binding State}" Width="125" />
+                    <GridViewColumn Header="Código venta" DisplayMemberBinding="{Binding Country}" Width="100" />
+                    <GridViewColumn Header="Ver" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Introduce el código del dependiente:" Margin="0,63,204,330" Background="#F2E2BE"/>
+        <TextBox x:Name="CDep_Copy" Margin="234,66,212,333" />
+        <Button Content="Buscar" Margin="468,63,54,327"  Background="#F2E2BE"/>
+
+
+    </Grid>
+</Window>

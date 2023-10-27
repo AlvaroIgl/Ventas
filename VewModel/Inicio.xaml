@@ -1,0 +1,30 @@
+﻿<Window x:Class="Ventas.VewModel.Inicio"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ventas.VewModel"
+        mc:Ignorable="d"
+         Title="Inicio" Height="298.833" Width="355.667">
+
+
+    <Grid Margin="0,0,0,2">
+        <DockPanel Margin="0,0,0,241">
+            <Label Content="Gestion de Ventas" Background="#FFE7AF" Width="314"/>
+            <Menu DockPanel.Dock="Top" Background="#FFE7AF">
+                <MenuItem Header="_File" Width="28" HorizontalAlignment="Right" RenderTransformOrigin="18.484,0.5">
+                    <MenuItem Header="_New" />
+                    <MenuItem Header="_Open" />
+                    <MenuItem Header="_Save" />
+                    <Separator />
+                    <MenuItem Header="_Exit" />
+                </MenuItem>
+            </Menu>
+
+        </DockPanel>
+        <Button Content="Dar de Alta" Margin="130,63,130,175" Background="#F2E2BE" />
+        <TextBox Name="venta" Margin="54,111,143,137"></TextBox>
+        <Button Content="Buscar Venta" Margin="227,111,22,134" Background="#F2E2BE"/>
+        <Button Content="Visualizar Venta" Margin="130,150,130,88" Background="#F2E2BE"/>
+    </Grid>
+</Window>
